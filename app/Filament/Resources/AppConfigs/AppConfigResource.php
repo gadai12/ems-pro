@@ -6,7 +6,7 @@ use App\Filament\Resources\AppConfigs\Pages\CreateAppConfig;
 use App\Filament\Resources\AppConfigs\Pages\EditAppConfig;
 use App\Filament\Resources\AppConfigs\Pages\ListAppConfigs;
 use App\Filament\Resources\AppConfigs\Schemas\AppConfigForm;
-use App\Filament\Resources\AppConfigs\Tables\AppConfigsTable;
+use App\Filament\Resources\AppConfigs\Tables\AppConfigTable;
 use App\Models\AppConfig;
 use BackedEnum;
 use Filament\Resources\Resource;
@@ -27,7 +27,7 @@ class AppConfigResource extends Resource
 
     public static function table(Table $table): Table
     {
-        return AppConfigsTable::configure($table);
+        return AppConfigTable::configure($table);
     }
 
     public static function getRelations(): array
