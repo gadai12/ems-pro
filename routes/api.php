@@ -6,6 +6,14 @@ use App\Http\Controllers\Api\AppConfigController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/', function () {
+    return response()->json([
+        'message' => 'EMS Pro API is running',
+        'status' => 'success',
+        'version' => '1.0.0'
+    ]);
+});
+
 // Public Routes
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
