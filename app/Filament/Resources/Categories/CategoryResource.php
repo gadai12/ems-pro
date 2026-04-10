@@ -6,7 +6,7 @@ use App\Filament\Resources\Categories\Pages\CreateCategory;
 use App\Filament\Resources\Categories\Pages\EditCategory;
 use App\Filament\Resources\Categories\Pages\ListCategories;
 use App\Filament\Resources\Categories\Schemas\CategoryForm;
-use App\Filament\Resources\Categories\Tables\CategoriesTable;
+use App\Filament\Resources\Categories\Tables\CategoryTable;
 use App\Models\Category;
 use BackedEnum;
 use Filament\Resources\Resource;
@@ -27,7 +27,7 @@ class CategoryResource extends Resource
 
     public static function table(Table $table): Table
     {
-        return CategoriesTable::configure($table);
+        return CategoryTable::configure($table);
     }
 
     public static function getRelations(): array
